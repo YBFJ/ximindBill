@@ -1,12 +1,12 @@
 <template>
   <div>
-    <slot name="content"/>
+    <slot name="content" />
   </div>
 </template>
 <style>
-  @import 'content.css';
+@import "content.css";
 </style>
-<script type='babel'>
+<script type="babel">
 export default {
   name:'VContent',
   components: {},

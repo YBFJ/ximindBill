@@ -1,14 +1,14 @@
 <template>
   <div class="login">
-    <div class="login-form">
+    <el-button>test</el-button>
+    <el-card>test</el-card>
+    <!-- <div class="login-form">
       <div class="login-header">
-        <img 
-          src="../../../asset/images/logo.png" 
-          height="100" 
-          alt="" >
+        <img src="../../../asset/images/logo.png" height="100" alt="" />
         <p>easyjs</p>
       </div>
       <div class="login-info">
+        <el-card>test</el-card>
         <el-input
           v-model="userName"
           placeholder="请输入用户名"
@@ -24,20 +24,24 @@
           style="margin-bottom: 18px"
         />
       </div>
-      
+
       <el-button
         type="primary"
         style="width: 100%;margin-bottom: 18px"
-        @click.native="login">登录</el-button>
+        @click.native="login"
+        >登录</el-button
+      >
       <div>
-        <el-checkbox 
-          v-model="remenber" 
-          class="login-remember">记住密码</el-checkbox>
-        <a 
-          href="javascript:;" 
-          style="float: right;color: #3C8DBC;font-size: 14px">注册</a>
+        <el-checkbox v-model="remenber" class="login-remember"
+          >记住密码</el-checkbox
+        >
+        <a
+          href="javascript:;"
+          style="float: right;color: #3C8DBC;font-size: 14px"
+          >注册</a
+        >
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -46,27 +50,25 @@
 </style>
 
 <script type="text/babel">
-import Vue from 'vue';
-import {
-  Input,
-  Button,
-  Checkbox
-} from 'element-ui';
-Vue.component(Input.name, Input);
-Vue.component(Button.name, Button);
-Vue.component(Checkbox.name, Checkbox);
+import Vue from "vue"
+import { Input, Button, Checkbox, Card } from "element-ui"
+Vue.component(Input.name, Input)
+Vue.component(Card.name, Card)
+
+Vue.component(Button.name, Button)
+Vue.component(Checkbox.name, Checkbox)
 export default {
-  data:function() {
+  data: function() {
     return {
-      userName: '',
-      password: '',
-      remenber: true
-    };
+      userName: "",
+      password: "",
+      remenber: true,
+    }
   },
   methods: {
     login() {
-      window.location.replace('/admin');
-    }
-  }
-};
+      window.location.replace("/admin")
+    },
+  },
+}
 </script>

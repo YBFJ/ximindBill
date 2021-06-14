@@ -1,19 +1,14 @@
 <template>
   <div class="main">
-    <LayoutHeader/>
-    <LayoutContent>
-      <div slot="content"><slot name="main"/></div>
-    </LayoutContent>
+    <div slot="content"><slot name="main" /></div>
   </div>
 </template>
 <style>
- .main {
+.main {
   display: flex;
 }
-.main .el-menu:not(.el-menu--collapse) {
-  width: 230px;
-}
-.main .app {
+
+.main .main-bill {
   width: 100%;
   background-color: #ecf0f5;
 }
@@ -29,7 +24,7 @@
   min-height: calc(100vh - 100px);
 }
 </style>
-<script type='babel'>
+<script type="babel">
 import LayoutHeader from './header/header';
 import LayoutContent from './content/content';
 export default {
